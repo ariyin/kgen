@@ -1,12 +1,18 @@
-# React + Vite
+<img src="/src/assets/kgen.png" alt="kgen" width="200"/>
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+An exploration of K-pop’s evolution across generations through musical and stylistic analysis, created for Spring 2025’s Digital Humanities 187. The name "kgen" is a play on the familiar “K-” prefix (as in K-pop, K-drama) and also draws from the mathematical use of k as a variable — symbolizing any given generation.
 
-Currently, two official plugins are available:
+## setup
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+to run:
 
-## Expanding the ESLint configuration
+```
+npm i
+npm run dev
+```
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+to deploy:
+
+```
+npm run deploy
+```
