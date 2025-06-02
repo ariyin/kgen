@@ -1,44 +1,98 @@
 @import "tailwindcss";
 
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+@theme {
+  --font-mdp: "MD Primer", "sans-serif";
+  --color-cadet-gray: #84a3b1;
+  --color-magenta: #ab6d96;
+  --color-platinum: #dcdcdc;
+  --color-muted-green: #9eb096;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
-}
-
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
+@layer base {
+  /* === MD PRIMER === */
+  @font-face {
+    font-family: "MD Primer";
+    src: url("assets/MDPrimer-Regular.ttf") format("truetype");
+    font-weight: 400;
+    font-style: normal;
   }
-  to {
-    transform: rotate(360deg);
+
+  @font-face {
+    font-family: "MD Primer";
+    src: url("assets/MDPrimer-Semibold.ttf") format("truetype");
+    font-weight: 600;
+    font-style: bold;
+  }
+
+  @font-face {
+    font-family: "MD Primer";
+    src: url("assets/MDPrimer-Bold.ttf") format("truetype");
+    font-weight: 700;
+    font-style: bold;
+  }
+
+  h1 {
+    @apply text-magenta text-4xl font-bold sm:text-5xl;
+  }
+
+  h2 {
+    @apply text-muted-green text-3xl font-bold sm:text-4xl;
+  }
+
+  h3 {
+    @apply text-cadet-gray text-2xl font-bold sm:text-3xl;
+  }
+
+  strong {
+    @apply font-semibold;
+  }
+
+  li:before {
+    @apply -ml-5 pr-3;
+    content: "•";
+  }
+
+  li {
+    @apply ml-5 list-none;
+  }
+
+  button {
+    @apply cursor-pointer;
+  }
+
+  body {
+    @apply bg-platinum font-mdp;
+  }
+
+  html {
+    @apply scroll-p-16;
   }
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+.content {
+  @apply flex flex-col gap-5;
 }
 
-.card {
-  padding: 2em;
+.analysis-grid {
+  @apply grid gap-8 sm:grid-cols-1 md:grid-cols-2;
 }
 
-.read-the-docs {
-  color: #888;
+.title-sections {
+  @apply flex flex-col gap-10;
+}
+
+.content-timeline {
+  @apply flex gap-10;
+}
+
+.timeline {
+  @apply hidden basis-1/6 flex-col items-start justify-between gap-5 sm:flex;
+}
+
+.timeline-line {
+  @apply bg-cadet-gray ml-5 h-full w-1;
+}
+
+.image-desc {
+  @apply flex flex-col gap-3;
 }
